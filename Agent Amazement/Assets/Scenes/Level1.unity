@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 748986127}
   - component: {fileID: 748986126}
   - component: {fileID: 748986125}
+  - component: {fileID: 748986147}
   m_Layer: 0
   m_Name: Maze
   m_TagString: Untagged
@@ -209,7 +210,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &748986124
 Rigidbody2D:
@@ -230,7 +231,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &748986125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -781,6 +782,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94001484, y: 14.999157}
   m_EdgeRadius: 0
+--- !u!114 &748986147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 748986121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962895ce993c02d4096a24cd3cb1bfc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroObj: {fileID: 917983703}
 --- !u!1 &917983699
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +832,7 @@ MonoBehaviour:
   BulletToUp: {fileID: 1410742903439392, guid: 3cb3da0944fec6440a1be5a6142912fd, type: 2}
   BulletToDown: {fileID: 1383630132975814, guid: 61b5d5ed358b3764597c7095fce31338,
     type: 2}
+  Maze: {fileID: 0}
   firerate: 0.5
 --- !u!95 &917983701
 Animator:
@@ -872,7 +886,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300036, guid: 2cbcc6f29ecd36f438e45e70464df489, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -895,7 +909,7 @@ Transform:
   m_LocalScale: {x: 2.2185977, y: 2.2185977, z: 2.2185977}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &917983704
 PolygonCollider2D:
@@ -940,7 +954,7 @@ GameObject:
   - component: {fileID: 1566965081}
   - component: {fileID: 1566965080}
   m_Layer: 0
-  m_Name: tausta
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,7 +1017,7 @@ Transform:
   m_LocalScale: {x: 1.416, y: 1.422, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135953023
 GameObject:

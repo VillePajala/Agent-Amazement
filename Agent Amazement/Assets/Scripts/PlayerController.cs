@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject BulletToLeft;
     public GameObject BulletToUp;
     public GameObject BulletToDown;
+    public GameObject Maze;
     Vector2 bulletPos;
     public float firerate = 0.5f;
     float nextfire = 0.0f;
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 
     void Start () {
 
-        
+        Maze = GameObject.Find("Maze");
 
     }
 
@@ -34,38 +35,69 @@ public class PlayerController : MonoBehaviour {
         
 
         // Moving Player down
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            this.transform.Translate(Vector2.down * speed * Time.deltaTime);
+            //this.transform.Translate(Vector2.down * speed * Time.deltaTime);
             bulletDirection = 0;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 3);
         }
 
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            //this.transform.Translate(Vector2.down * speed * Time.deltaTime);
+            bulletDirection = 0;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
 
         // Moving Player right
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            this.transform.Translate(Vector2.right * speed * Time.deltaTime);
+            // this.transform.Translate(Vector2.right * speed * Time.deltaTime);
             bulletDirection = 1;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(-3, 0);
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            // this.transform.Translate(Vector2.right * speed * Time.deltaTime);
+            bulletDirection = 1;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
 
         // Moving Player up
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            this.transform.Translate(Vector2.up * speed * Time.deltaTime);
+           // this.transform.Translate(Vector2.up * speed * Time.deltaTime);
             bulletDirection = 2;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-3); 
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            // this.transform.Translate(Vector2.up * speed * Time.deltaTime);
+            bulletDirection = 2;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
 
         // Moving Player left
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            // this.transform.Translate(Vector2.left * speed * Time.deltaTime);
+            bulletDirection = 3;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
         {
             this.transform.Translate(Vector2.left * speed * Time.deltaTime);
             bulletDirection = 3;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
 
 
 
 
-        
+
         // Palayer animation walking up
         if (Input.GetKeyDown(KeyCode.W))
         {  
