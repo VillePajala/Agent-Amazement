@@ -15,12 +15,12 @@ public class PlayerController : MonoBehaviour {
     public GameObject BulletToLeft;
     public GameObject BulletToUp;
     public GameObject BulletToDown;
-    
+    public GameObject Maze;
     Vector2 bulletPos;
     public float firerate = 0.5f;
     float nextfire = 0.0f;
 
-    public GameObject Maze;
+
 
     void Start () {
 
