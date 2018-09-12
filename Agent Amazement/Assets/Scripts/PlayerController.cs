@@ -15,12 +15,12 @@ public class PlayerController : MonoBehaviour {
     public GameObject BulletToLeft;
     public GameObject BulletToUp;
     public GameObject BulletToDown;
-    public GameObject Maze;
+    
     Vector2 bulletPos;
     public float firerate = 0.5f;
     float nextfire = 0.0f;
 
-
+    public GameObject Maze;
 
     void Start () {
 
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour {
             //this.transform.Translate(Vector2.down * speed * Time.deltaTime);
             bulletDirection = 0;
             this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 3);
+            this.GetComponent<Animator>().enabled = true;
+            this.GetComponent<Animator>().SetInteger("Direction", 0);
         }
 
         if (Input.GetKeyUp(KeyCode.S))
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour {
             //this.transform.Translate(Vector2.down * speed * Time.deltaTime);
             bulletDirection = 0;
             this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            this.GetComponent<Animator>().enabled = false;
         }
 
         // Moving Player right
@@ -55,6 +58,8 @@ public class PlayerController : MonoBehaviour {
             // this.transform.Translate(Vector2.right * speed * Time.deltaTime);
             bulletDirection = 1;
             this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(-3, 0);
+            this.GetComponent<Animator>().enabled = true;
+            this.GetComponent<Animator>().SetInteger("Direction", 1);
         }
 
         if (Input.GetKeyUp(KeyCode.D))
@@ -62,6 +67,7 @@ public class PlayerController : MonoBehaviour {
             // this.transform.Translate(Vector2.right * speed * Time.deltaTime);
             bulletDirection = 1;
             this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            this.GetComponent<Animator>().enabled = false;
         }
 
         // Moving Player up
@@ -69,7 +75,9 @@ public class PlayerController : MonoBehaviour {
         {
            // this.transform.Translate(Vector2.up * speed * Time.deltaTime);
             bulletDirection = 2;
-            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-3); 
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-3);
+            this.GetComponent<Animator>().enabled = true;
+            this.GetComponent<Animator>().SetInteger("Direction", 2);
         }
 
         if (Input.GetKeyUp(KeyCode.W))
@@ -77,6 +85,7 @@ public class PlayerController : MonoBehaviour {
             // this.transform.Translate(Vector2.up * speed * Time.deltaTime);
             bulletDirection = 2;
             this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            this.GetComponent<Animator>().enabled = false;
         }
 
         // Moving Player left
@@ -85,65 +94,24 @@ public class PlayerController : MonoBehaviour {
             // this.transform.Translate(Vector2.left * speed * Time.deltaTime);
             bulletDirection = 3;
             this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
-        }
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            this.transform.Translate(Vector2.left * speed * Time.deltaTime);
-            bulletDirection = 3;
-            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        }
-
-
-
-
-
-        // Palayer animation walking up
-        if (Input.GetKeyDown(KeyCode.W))
-        {  
-            this.GetComponent<Animator>().enabled = true;
-            this.GetComponent<Animator>().SetInteger("Direction", 2);
-        }
-        
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-           this.GetComponent<Animator>().enabled = false;
-        }
-        
-
-
-        // Palayer animation walkign down
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            this.GetComponent<Animator>().enabled = true;
-            this.GetComponent<Animator>().SetInteger("Direction", 0);
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            this.GetComponent<Animator>().enabled = false;
-        }
-
-        // Palayer animation walking right
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            this.GetComponent<Animator>().enabled = true;
-            this.GetComponent<Animator>().SetInteger("Direction", 1);
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            this.GetComponent<Animator>().enabled = false;
-        }
-
-        // Palayer animation walking left
-        if (Input.GetKeyDown(KeyCode.A))
-        {
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Direction", 3);
         }
+
         if (Input.GetKeyUp(KeyCode.A))
         {
+            //this.transform.Translate(Vector2.left * speed * Time.deltaTime);
+            bulletDirection = 3;
+            this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
+
+
+
+
+
+   
+        
 
 
         // Enabling shooting animations
