@@ -788,7 +788,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 748986121}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 962895ce993c02d4096a24cd3cb1bfc8, type: 3}
   m_Name: 
@@ -832,7 +832,6 @@ MonoBehaviour:
   BulletToUp: {fileID: 1410742903439392, guid: 3cb3da0944fec6440a1be5a6142912fd, type: 2}
   BulletToDown: {fileID: 1383630132975814, guid: 61b5d5ed358b3764597c7095fce31338,
     type: 2}
-  Maze: {fileID: 0}
   firerate: 0.5
 --- !u!95 &917983701
 Animator:
@@ -1029,6 +1028,7 @@ GameObject:
   - component: {fileID: 2135953026}
   - component: {fileID: 2135953025}
   - component: {fileID: 2135953024}
+  - component: {fileID: 2135953027}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1096,3 +1096,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2135953027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135953023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f852dd8698f33f848a01fec8f833ec0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 917983699}
