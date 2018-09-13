@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject BulletToDown;
 
     public GameObject Camera = null;
+
+    public GameObject explosion = null;
     
     Vector2 bulletPos;
     public float firerate = 0.5f;
@@ -167,7 +169,10 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "trump")
         {
 
+            Vector2 location = this.GetComponent<Transform>().position;
+            GameObject explode = (GameObject)Instantiate(this.explosion, location, Quaternion.identity);
             Destroy(gameObject);
+            Destroy(explode.gameObject, 1f);
             this.Camera.GetComponent<CameraController>().enabled = false;
 
         }

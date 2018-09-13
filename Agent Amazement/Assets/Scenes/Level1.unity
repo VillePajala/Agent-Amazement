@@ -1571,6 +1571,7 @@ MonoBehaviour:
   BulletToDown: {fileID: 1383630132975814, guid: 61b5d5ed358b3764597c7095fce31338,
     type: 2}
   Camera: {fileID: 0}
+  explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
   firerate: 0.1
 --- !u!95 &917983701
 Animator:

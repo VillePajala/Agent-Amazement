@@ -7,6 +7,8 @@ public class TrumpController : MonoBehaviour {
     public int health = 10;
     public int hits = 0;
 
+    public GameObject explosion = null;
+
 	void Start () {
 		
 	} // Start
@@ -25,7 +27,10 @@ public class TrumpController : MonoBehaviour {
 
         if (hits >= health)
         {
+            Vector2 location = this.GetComponent<Transform>().position;
+            GameObject explode = (GameObject)Instantiate(this.explosion, location, Quaternion.identity);
             Destroy(gameObject);
+            Destroy(explode.gameObject, 1f);
         }
             
 
