@@ -6,18 +6,17 @@ public class StarController : MonoBehaviour {
 
     private GameObject screen = null;
 
-	// Use this for initialization
 	void Start () {
 
         this.screen = GameObject.Find("Screen");
 
-	}
+	} // Start
 	
-	// Update is called once per frame
 	void Update () {
 		
-	}
+	} // Update
 
+    // If the player hits the star, star is destroyed and player gains 1 point
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name.Equals("Player"))
@@ -25,5 +24,6 @@ public class StarController : MonoBehaviour {
             Destroy(gameObject);
             this.screen.GetComponent<ScoreCounter>().points += 1;
         }
-    }
-}
+    } // OnTriggerEnter2D
+
+}// Class

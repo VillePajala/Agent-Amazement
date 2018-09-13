@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TrumpController : MonoBehaviour {
 
+    public int health = 10;
+    public int hits = 0;
+
 	void Start () {
 		
 	} // Start
@@ -12,21 +15,22 @@ public class TrumpController : MonoBehaviour {
 		
 	} // Update
 
+    // Trump dies if hit by a bullet enough times 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject, 2f);
-            // Player Dies
-   
+            hits += 1;
         }
 
-        else
+        if (hits >= health)
         {
             Destroy(gameObject);
         }
-       
+            
 
         
+
     } // OnCollisionEneter2D
+
 } // Class

@@ -8,9 +8,12 @@ public class Restart : MonoBehaviour
 
     void Update()
     {
+        // If the key 'R' is pressed, the game restarts
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         } // if
+
     } // Update
+
 } // Class

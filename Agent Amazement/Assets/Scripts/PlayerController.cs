@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject BulletToLeft;
     public GameObject BulletToUp;
     public GameObject BulletToDown;
+
+    public GameObject Camera = null;
     
     Vector2 bulletPos;
     public float firerate = 0.5f;
@@ -19,15 +21,16 @@ public class PlayerController : MonoBehaviour {
 
     void Start () {
 
+        this.Camera = GameObject.Find("Main Camera");
+
     } // Start
 
 
     void LateUpdate () {
 
-        
-        
+        // Player movement and associated animations
 
-        // Moving Player down
+        // Moving Player down with animation
         if (Input.GetKey(KeyCode.S))
         {
             this.transform.Translate(Vector2.down * speed * Time.deltaTime);
@@ -45,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
         else
 
-        // Moving Player right
+        // Moving Player right with animation
         if (Input.GetKey(KeyCode.D))
         {
             this.transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -63,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 
         else
 
-        // Moving Player up
+        // Moving Player up with animation
         if (Input.GetKey(KeyCode.W))
         {
             this.transform.Translate(Vector2.up * speed * Time.deltaTime);
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour {
 
         else
 
-        // Moving Player left
+        // Moving Player left with animation
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -97,13 +100,13 @@ public class PlayerController : MonoBehaviour {
             this.GetComponent<Animator>().enabled = false;
         }
 
-   
-        
+
+
 
         // Enabling shooting animations
-
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            // Player stops when shooting
             speed = 0;
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Shoot", 1);
@@ -111,8 +114,10 @@ public class PlayerController : MonoBehaviour {
 
         else
 
+        // Disabling shooting animations
         if (Input.GetKeyUp(KeyCode.Return))
         {
+            // Player continues movement after shooting
             speed = 4f;
             this.GetComponent<Animator>().enabled = false;
             this.GetComponent<Animator>().SetInteger("Shoot", 0);
@@ -129,8 +134,7 @@ public class PlayerController : MonoBehaviour {
     } // LateUpdate
 
 
-
-
+    // Creating the right bullets when palyer shoots based on palyer's direction
     void fire()
     {
         bulletPos = transform.position;
@@ -153,5 +157,22 @@ public class PlayerController : MonoBehaviour {
             Instantiate(BulletToDown, bulletPos, Quaternion.identity);
         } 
     } // Fire
+
+
+
+    // Player dies if enemy is hit
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "trump")
+        {
+
+            Destroy(gameObject);
+            this.Camera.GetComponent<CameraController>().enabled = false;
+
+        }
+
+
+    } // OnCollisionEneter2D
 
 } // Class

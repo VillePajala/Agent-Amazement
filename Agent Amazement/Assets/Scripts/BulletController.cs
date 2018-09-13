@@ -22,10 +22,12 @@ public class BulletController : MonoBehaviour {
 
 	} // Update
 
+
+    // Destroy bullet when hitting any collider
     void OnCollisionEnter2D(Collision2D collision)
     {  
 
-            Destroy(gameObject); 
+        Destroy(gameObject); 
 
     } // OnCollisionEnter2D
 

@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 61648765752190864}
   - component: {fileID: 114184537109122294}
   m_Layer: 0
-  m_Name: New Prefab
-  m_TagString: Untagged
+  m_Name: Trump
+  m_TagString: trump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 96489beed04573d469d9459dd9a968d0, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d78db753fd93a246900fdfbddcdb815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 20
+  hits: 0
 --- !u!212 &212270879524294916
 SpriteRenderer:
   m_ObjectHideFlags: 1
