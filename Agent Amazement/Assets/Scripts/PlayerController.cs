@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float speed = 1.5f;
-
+    public float speed = 2.5f;
     float bulletDirection = 0;
-
-    //public Transform firePoint;
-    //public GameObject Bullet;
 
     public GameObject BulletToRight;
     public GameObject BulletToLeft;
@@ -21,12 +17,9 @@ public class PlayerController : MonoBehaviour {
     float nextfire = 0.0f;
 
 
-
     void Start () {
 
-     
-
-    }
+    } // Start
 
 
     void LateUpdate () {
@@ -47,9 +40,6 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.S))
         {
-            // this.transform.Translate(Vector2.down * 0 * Time.deltaTime);
-            // bulletDirection = 0;
-            // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
 
@@ -60,7 +50,6 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.Translate(Vector2.right * speed * Time.deltaTime);
             bulletDirection = 1;
-            // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(-3, 0);
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Direction", 1);
         }
@@ -69,9 +58,6 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.D))
         {
-            // this.transform.Translate(Vector2.right * speed * Time.deltaTime);
-            // bulletDirection = 1;
-            // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
 
@@ -82,7 +68,6 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.Translate(Vector2.up * speed * Time.deltaTime);
             bulletDirection = 2;
-            // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-3);
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Direction", 2);
         }
@@ -91,9 +76,6 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.W))
         {
-            // this.transform.Translate(Vector2.up * speed * Time.deltaTime);
-            // bulletDirection = 2;
-            // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
 
@@ -104,7 +86,6 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.Translate(Vector2.left * speed * Time.deltaTime);
             bulletDirection = 3;
-            //this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(3, 0);
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Direction", 3);
         }
@@ -113,15 +94,11 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.A))
         {
-            // this.transform.Translate(Vector2.left * speed * Time.deltaTime);
-            // bulletDirection = 3;
-            //this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
 
    
         
-
 
         // Enabling shooting animations
 
@@ -132,9 +109,11 @@ public class PlayerController : MonoBehaviour {
             this.GetComponent<Animator>().SetInteger("Shoot", 1);
         }
 
+        else
+
         if (Input.GetKeyUp(KeyCode.Return))
         {
-            speed = 1.5f;
+            speed = 4f;
             this.GetComponent<Animator>().enabled = false;
             this.GetComponent<Animator>().SetInteger("Shoot", 0);
             
@@ -147,9 +126,10 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-    }
+    } // LateUpdate
 
- 
+
+
 
     void fire()
     {
@@ -172,6 +152,6 @@ public class PlayerController : MonoBehaviour {
             bulletPos += new Vector2(-0.14f, -0.9f);
             Instantiate(BulletToDown, bulletPos, Quaternion.identity);
         } 
-    }
+    } // Fire
 
-}
+} // Class

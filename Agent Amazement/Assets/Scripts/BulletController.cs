@@ -8,26 +8,26 @@ public class BulletController : MonoBehaviour {
     public float velY = 5f;
     Rigidbody2D rb;
 
-	// Use this for initialization
+
 	void Start () {
+
         rb = GetComponent<Rigidbody2D>();
-	}
+
+	} //Start
 	
-	// Update is called once per frame
+
 	void Update () {
 
         rb.velocity = new Vector2(velX, velY);
-        // Destroy(gameObject, 4f);
 
-       
-	}
+	} // Update
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-            Destroy(gameObject);
-        
-    }
+    {  
+
+            Destroy(gameObject); 
+
+    } // OnCollisionEnter2D
 
 
-}
+} // Class

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamerController : MonoBehaviour {
+public class CameraController : MonoBehaviour {
 
     public GameObject player;
 
@@ -12,12 +12,13 @@ public class CamerController : MonoBehaviour {
 
         offset = transform.position - player.transform.position;
 
-	}
+	} // Start
 	
 	
 	void LateUpdate () {
 
         transform.position = player.transform.position + offset;
 
-	}
-}
+	} // LateUpdate
+
+} // Class

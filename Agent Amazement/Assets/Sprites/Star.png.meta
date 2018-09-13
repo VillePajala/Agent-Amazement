@@ -1,0 +1,478 @@
+fileFormatVersion: 2
+guid: 23b1074e1f39bb54482bf4974aadee05
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Star_0
+    21300002: Star_1
+    21300004: Star_2
+    21300006: Star_3
+    21300008: Star_4
+    21300010: Star_5
+    21300012: Star_6
+    21300014: Star_7
+    21300016: Star_8
+    21300018: Star_9
+    21300020: Star_10
+    21300022: Star_11
+    21300024: Star_12
+    21300026: Star_13
+    21300028: Star_14
+    21300030: Star_15
+    21300032: Star_16
+    21300034: Star_17
+    21300036: Star_18
+    21300038: Star_19
+    21300040: Star_20
+    21300042: Star_21
+    21300044: Star_22
+    21300046: Star_23
+    21300048: Star_24
+    21300050: Star_25
+    21300052: Star_26
+    21300054: Star_27
+    21300056: Star_28
+    21300058: Star_29
+    21300060: Star_30
+    21300062: Star_31
+    21300064: Star_32
+    21300066: Star_33
+    21300068: Star_34
+    21300070: Star_35
+    21300072: Star_36
+    21300074: Star_37
+    21300076: Star_38
+    21300078: Star_39
+    21300080: Star_40
+    21300082: Star_41
+    21300084: Star_42
+    21300086: Star_43
+    21300088: Star_44
+    21300090: Star_45
+    21300092: Star_46
+    21300094: Star_47
+    21300096: Star_48
+    21300098: Star_49
+    21300100: Star_50
+    21300102: Star_51
+    21300104: Star_52
+    21300106: Star_53
+    21300108: Star_54
+    21300110: Star_55
+    21300112: Star_56
+    21300114: Star_57
+    21300116: Star_58
+    21300118: Star_59
+    21300120: Star_60
+    21300122: Star_61
+    21300124: Star_62
+    21300126: Star_63
+    21300128: Star_64
+    21300130: Star_65
+    21300132: Star_66
+    21300134: Star_67
+    21300136: Star_68
+    21300138: Star_69
+    21300140: Star_70
+    21300142: Star_71
+    21300144: Star_72
+    21300146: Star_73
+    21300148: Star_74
+    21300150: Star_75
+    21300152: Star_76
+    21300154: Star_77
+    21300156: Star_78
+    21300158: Star_79
+    21300160: Star_80
+    21300162: Star_81
+    21300164: Star_82
+    21300166: Star_83
+    21300168: Star_84
+    21300170: Star_85
+    21300172: Star_86
+    21300174: Star_87
+    21300176: Star_88
+    21300178: Star_89
+    21300180: Star_90
+    21300182: Star_91
+    21300184: Star_92
+    21300186: Star_93
+    21300188: Star_94
+    21300190: Star_95
+    21300192: Star_96
+    21300194: Star_97
+    21300196: Star_98
+    21300198: Star_99
+    21300200: Star_100
+    21300202: Star_101
+    21300204: Star_102
+    21300206: Star_103
+    21300208: Star_104
+    21300210: Star_105
+    21300212: Star_106
+    21300214: Star_107
+    21300216: Star_108
+    21300218: Star_109
+    21300220: Star_110
+    21300222: Star_111
+    21300224: Star_112
+    21300226: Star_113
+    21300228: Star_114
+    21300230: Star_115
+    21300232: Star_116
+    21300234: Star_117
+    21300236: Star_118
+    21300238: Star_119
+    21300240: Star_120
+    21300242: Star_121
+    21300244: Star_122
+    21300246: Star_123
+    21300248: Star_124
+    21300250: Star_125
+    21300252: Star_126
+    21300254: Star_127
+    21300256: Star_128
+    21300258: Star_129
+    21300260: Star_130
+    21300262: Star_131
+    21300264: Star_132
+    21300266: Star_133
+    21300268: Star_134
+    21300270: Star_135
+    21300272: Star_136
+    21300274: Star_137
+    21300276: Star_138
+    21300278: Star_139
+    21300280: Star_140
+    21300282: Star_141
+    21300284: Star_142
+    21300286: Star_143
+    21300288: Star_144
+    21300290: Star_145
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Star_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 51
+        width: 213
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b2e8ea61820e041accbd9bc66c0ead
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 51
+        width: 211
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f07e92dff5abb49b0ebc080d08373e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_2
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 51
+        width: 191
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcde9d015a422141bf5440868d277a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_3
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 51
+        width: 166
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03396709d6e782a4988072456854b11d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_4
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 51
+        width: 140
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace35933ac2446c46bd1a9c32e877048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_5
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 51
+        width: 115
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac842fc9b9ae4d141acb5141deb21555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_6
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 51
+        width: 142
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff2c1a30186bf145afbab408680c181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_7
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 51
+        width: 168
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89efe587a648b944593ac1f77982db08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_8
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 51
+        width: 189
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2712d6881300248a77076ac426fdf6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_9
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 51
+        width: 211
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f33d1b8be0853f4bad0880639b3fad5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 786f0385f6a77bb4186c0eef89cb5187
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

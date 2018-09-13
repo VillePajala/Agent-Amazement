@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf3eede09256de489a3b1af47804157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velX: 2
+  velX: 5
   velY: 0
 --- !u!212 &212708927194699988
 SpriteRenderer:
