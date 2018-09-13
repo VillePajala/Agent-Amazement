@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
 
     public float velX = 5f;
-    public float velY = 0f;
+    public float velY = 5f;
     Rigidbody2D rb;
 
 	// Use this for initialization
@@ -17,10 +17,17 @@ public class BulletController : MonoBehaviour {
 	void Update () {
 
         rb.velocity = new Vector2(velX, velY);
-        Destroy(gameObject, 2f);
+        // Destroy(gameObject, 4f);
 
+       
 	}
 
-    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+       
+            Destroy(gameObject);
+        
+    }
+
 
 }

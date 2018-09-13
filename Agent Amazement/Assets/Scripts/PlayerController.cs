@@ -15,21 +15,21 @@ public class PlayerController : MonoBehaviour {
     public GameObject BulletToLeft;
     public GameObject BulletToUp;
     public GameObject BulletToDown;
-    // public GameObject Maze;
+    
     Vector2 bulletPos;
-    public float firerate = 0.0f;
+    public float firerate = 0.5f;
     float nextfire = 0.0f;
 
 
 
     void Start () {
 
-       // Maze = GameObject.Find("Maze");
+     
 
     }
 
 
-    void Update () {
+    void LateUpdate () {
 
         
         
@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.Translate(Vector2.down * speed * Time.deltaTime);
             bulletDirection = 0;
-            // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 3);
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Direction", 0);
         }
@@ -49,7 +48,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.S))
         {
             // this.transform.Translate(Vector2.down * 0 * Time.deltaTime);
-            bulletDirection = 0;
+            // bulletDirection = 0;
             // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
@@ -71,7 +70,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.D))
         {
             // this.transform.Translate(Vector2.right * speed * Time.deltaTime);
-            bulletDirection = 1;
+            // bulletDirection = 1;
             // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
@@ -93,7 +92,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.W))
         {
             // this.transform.Translate(Vector2.up * speed * Time.deltaTime);
-            bulletDirection = 2;
+            // bulletDirection = 2;
             // this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
@@ -115,7 +114,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.A))
         {
             // this.transform.Translate(Vector2.left * speed * Time.deltaTime);
-            bulletDirection = 3;
+            // bulletDirection = 3;
             //this.Maze.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             this.GetComponent<Animator>().enabled = false;
         }
@@ -128,12 +127,14 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            speed = 0;
             this.GetComponent<Animator>().enabled = true;
             this.GetComponent<Animator>().SetInteger("Shoot", 1);
         }
 
         if (Input.GetKeyUp(KeyCode.Return))
         {
+            speed = 1.5f;
             this.GetComponent<Animator>().enabled = false;
             this.GetComponent<Animator>().SetInteger("Shoot", 0);
             
@@ -164,11 +165,11 @@ public class PlayerController : MonoBehaviour {
             Instantiate(BulletToLeft, bulletPos, Quaternion.identity);
         } else if (bulletDirection == 2)
         {
-            bulletPos += new Vector2(+0.14f, +0.5f);
+            bulletPos += new Vector2(+0.14f, +0.6f);
             Instantiate(BulletToUp, bulletPos, Quaternion.identity);
         } else if (bulletDirection == 0)
         {
-            bulletPos += new Vector2(-0.14f, -0.5f);
+            bulletPos += new Vector2(-0.14f, -0.9f);
             Instantiate(BulletToDown, bulletPos, Quaternion.identity);
         } 
     }

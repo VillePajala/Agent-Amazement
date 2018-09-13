@@ -145,7 +145,6 @@ GameObject:
   - component: {fileID: 748986127}
   - component: {fileID: 748986126}
   - component: {fileID: 748986125}
-  - component: {fileID: 748986147}
   m_Layer: 0
   m_Name: Maze
   m_TagString: Untagged
@@ -231,7 +230,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &748986125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -782,18 +781,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.94001484, y: 14.999157}
   m_EdgeRadius: 0
---- !u!114 &748986147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 748986121}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 962895ce993c02d4096a24cd3cb1bfc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroObj: {fileID: 917983703}
 --- !u!1 &917983699
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +791,9 @@ GameObject:
   - component: {fileID: 917983703}
   - component: {fileID: 917983702}
   - component: {fileID: 917983701}
-  - component: {fileID: 917983700}
   - component: {fileID: 917983704}
+  - component: {fileID: 917983700}
+  - component: {fileID: 917983705}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -943,6 +931,26 @@ PolygonCollider2D:
       - {x: -0.14, y: -0.32}
       - {x: 0.11, y: -0.32}
       - {x: 0.17, y: -0.31}
+--- !u!50 &917983705
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917983699}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1566965079
 GameObject:
   m_ObjectHideFlags: 0
