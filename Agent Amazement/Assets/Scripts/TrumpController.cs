@@ -10,9 +10,12 @@ public class TrumpController : MonoBehaviour {
     private GameObject screen = null;
     public GameObject explosion = null;
 
+    private AudioSource[] sounds = null;
+
 	void Start () {
 
         this.screen = GameObject.Find("Screen");
+        this.sounds = GameObject.Find("SoundController").GetComponents<AudioSource>();
 
 	} // Start
 	
@@ -34,6 +37,7 @@ public class TrumpController : MonoBehaviour {
             GameObject explode = (GameObject)Instantiate(this.explosion, location, Quaternion.identity);
             this.screen.GetComponent<ScoreCounter>().killcount += 1;
             Destroy(gameObject);
+            this.sounds[1].Play();
             Destroy(explode.gameObject, 1f);
         }
             

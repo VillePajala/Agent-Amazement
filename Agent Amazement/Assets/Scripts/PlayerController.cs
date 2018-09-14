@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour {
     public GameObject Camera = null;
 
     public GameObject explosion = null;
-    
+
+    private AudioSource[] sounds = null;
+
     Vector2 bulletPos;
     public float firerate = 0.5f;
     float nextfire = 0.0f;
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
 
         this.Camera = GameObject.Find("Main Camera");
-
+        this.sounds = GameObject.Find("SoundController").GetComponents<AudioSource>();
     } // Start
 
 
@@ -130,6 +132,8 @@ public class PlayerController : MonoBehaviour {
         {
             nextfire = Time.time + firerate;
             fire();
+            this.sounds[2].Play();
+            
         }
 
 
@@ -171,6 +175,8 @@ public class PlayerController : MonoBehaviour {
 
             Vector2 location = this.GetComponent<Transform>().position;
             GameObject explode = (GameObject)Instantiate(this.explosion, location, Quaternion.identity);
+            this.sounds[1].Play();
+            this.sounds[7].Play();
             Destroy(gameObject);
             Destroy(explode.gameObject, 1f);
             this.Camera.GetComponent<CameraController>().enabled = false;

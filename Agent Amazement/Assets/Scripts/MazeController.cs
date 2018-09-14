@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinController : MonoBehaviour {
+public class MazeController : MonoBehaviour {
 
-    public GameObject coin = null;
     private AudioSource[] sounds = null;
 
     void Start () {
 
-        this.coin = GameObject.Find("Screen");
         this.sounds = GameObject.Find("SoundController").GetComponents<AudioSource>();
 
     } // Start
@@ -19,18 +17,15 @@ public class CoinController : MonoBehaviour {
 		
 	} // Update
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "trump")
         {
-            this.coin.GetComponent<ScoreCounter>().enabled = false;
-            this.sounds[5].Play();
-            this.sounds[6].Play();
-            Destroy(gameObject);
+           
+            this.sounds[4].Play();
+
         }
 
 
     } // OnCollisionEneter2D
-
-} // Class
+}

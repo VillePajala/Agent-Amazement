@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class StarController : MonoBehaviour {
 
+    private AudioSource[] sounds = null;
     private GameObject screen = null;
 
 	void Start () {
 
         this.screen = GameObject.Find("Screen");
+        this.sounds = GameObject.Find("SoundController").GetComponents<AudioSource>();
 
-	} // Start
+    } // Start
 	
 	void Update () {
 		
@@ -22,6 +24,7 @@ public class StarController : MonoBehaviour {
         if (collision.name.Equals("Player"))
         {
             Destroy(gameObject);
+            this.sounds[3].Play();
             this.screen.GetComponent<ScoreCounter>().points += 1;
         }
     } // OnTriggerEnter2D
