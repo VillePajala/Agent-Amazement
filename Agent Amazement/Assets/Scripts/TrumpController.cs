@@ -7,10 +7,13 @@ public class TrumpController : MonoBehaviour {
     public int health = 10;
     public int hits = 0;
 
+    private GameObject screen = null;
     public GameObject explosion = null;
 
 	void Start () {
-		
+
+        this.screen = GameObject.Find("Screen");
+
 	} // Start
 	
 	void Update () {
@@ -29,6 +32,7 @@ public class TrumpController : MonoBehaviour {
         {
             Vector2 location = this.GetComponent<Transform>().position;
             GameObject explode = (GameObject)Instantiate(this.explosion, location, Quaternion.identity);
+            this.screen.GetComponent<ScoreCounter>().killcount += 1;
             Destroy(gameObject);
             Destroy(explode.gameObject, 1f);
         }
