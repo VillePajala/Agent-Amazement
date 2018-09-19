@@ -264,13 +264,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!61 &299485600
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299485595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3736,6 +3737,10 @@ GameObject:
   - component: {fileID: 2135953024}
   - component: {fileID: 2135953027}
   - component: {fileID: 2135953028}
+  - component: {fileID: 2135953029}
+  - component: {fileID: 2135953030}
+  - component: {fileID: 2135953031}
+  - component: {fileID: 2135953032}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3785,7 +3790,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -3826,3 +3831,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611d573e213812f4cb97aa5967ba8fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2135953029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135953023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db977065436d760459b1697ad4de7055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2135953030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135953023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8435f620e7a20734ba6f5837955960c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+--- !u!114 &2135953031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135953023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1fa37117388cc94c94e38c80da1eda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+--- !u!114 &2135953032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135953023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b253c1604e15f41a990adcf15961bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  win: 0
