@@ -1,4 +1,4 @@
 # Agent-Amazement
 Agent Amazent is a 2D shooting where an agent tries to collect stars and destroy despots on his way.
 
-![](Images/Agent%20Amazement.png)
+![](Agent Amazement/Images/Agent%20Amazement.png)
