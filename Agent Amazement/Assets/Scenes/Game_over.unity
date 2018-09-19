@@ -206,6 +206,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: {fileID: 0}
   Camera: {fileID: 0}
+  screen: {fileID: 0}
+  score: 0
+  kills: 0
 --- !u!61 &299485600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1398,8 +1401,8 @@ MonoBehaviour:
   explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
   screen: {fileID: 0}
   firerate: 0.1
-  score: 0
-  kills: 0
+  scoreamount: 0
+  killamount: 0
 --- !u!95 &917983701
 Animator:
   serializedVersion: 3
