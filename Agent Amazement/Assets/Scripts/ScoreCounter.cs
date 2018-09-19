@@ -36,6 +36,7 @@ public class ScoreCounter : MonoBehaviour {
         // if all stars have been collected and all the enemies killed
         if (points >= 20 && killcount >= 10)
         {
+            
             // MasterCoin's layer order is changed so it is not hidden behind background
             this.mastercoin.GetComponent<Renderer>().sortingOrder = 3;
             // MasterCoin's collider is enabled so it can be collected

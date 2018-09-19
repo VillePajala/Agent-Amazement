@@ -21,10 +21,14 @@ public class PlayerController : MonoBehaviour {
     public GameObject Camera = null;
     public GameObject explosion = null;
     private AudioSource[] sounds = null;
+    public GameObject screen = null;
 
     Vector2 bulletPos;
     public float firerate = 0.5f;
     float nextfire = 0.0f;
+
+    public int scoreamount = 0;
+    public int killamount = 0;
 
 
     void Start () {
@@ -32,6 +36,8 @@ public class PlayerController : MonoBehaviour {
         // Findig GameObjects
         this.Camera = GameObject.Find("Main Camera");
         this.sounds = GameObject.Find("SoundController").GetComponents<AudioSource>();
+        this.screen = GameObject.Find("Screen");
+        PlayerPrefs.DeleteAll();
 
     } // Start
 
@@ -204,6 +210,14 @@ public class PlayerController : MonoBehaviour {
         // If a gameobject tagged as "trumop" hits the player
         if (collision.gameObject.tag == "trump")
         {
+            // Getting the score count on time of player death
+            scoreamount = this.screen.GetComponent<ScoreCounter>().points;
+            // Getting the kill count on time of player death
+            killamount = this.screen.GetComponent<ScoreCounter>().killcount;
+            // Save score for another scene
+            PlayerPrefs.SetInt("scoreamount", this.scoreamount);
+            // Save kills for another scene
+            PlayerPrefs.SetInt("killamount", this.killamount);
             // Collision sets the public int delay in GameOver -script to 1 which starts the process of scene change
             this.Camera.GetComponent<GameOver>().delay = 1;
             // the location of the player at the time of collision is saved
