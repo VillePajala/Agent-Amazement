@@ -265,6 +265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coin: {fileID: 0}
   Camera: {fileID: 0}
+  screen: {fileID: 0}
+  score: 0
+  kills: 0
 --- !u!61 &299485600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -700,6 +703,7 @@ GameObject:
   - component: {fileID: 624354499}
   - component: {fileID: 624354498}
   - component: {fileID: 624354497}
+  - component: {fileID: 624354500}
   m_Layer: 0
   m_Name: SoundController
   m_TagString: Untagged
@@ -1480,6 +1484,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &624354500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624354490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef43661b3f68d948bfe0b7829819c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &636796569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +2561,10 @@ MonoBehaviour:
     type: 2}
   Camera: {fileID: 0}
   explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 2}
+  screen: {fileID: 0}
   firerate: 0.1
+  scoreamount: 0
+  killamount: 0
 --- !u!95 &917983701
 Animator:
   serializedVersion: 3

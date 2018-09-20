@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 624354499}
   - component: {fileID: 624354498}
   - component: {fileID: 624354497}
+  - component: {fileID: 624354500}
   m_Layer: 0
   m_Name: SoundController
   m_TagString: Untagged
@@ -1223,6 +1224,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &624354500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624354490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef43661b3f68d948bfe0b7829819c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891366557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,8 +1768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148.6, y: -82.4}
-  m_SizeDelta: {x: 160, y: 174.37}
+  m_AnchoredPosition: {x: -130.57, y: -107.62}
+  m_SizeDelta: {x: 196.07, y: 224.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216534837
 MonoBehaviour:
@@ -1791,15 +1803,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move: WASD
+  m_Text: 'MOVE: WASD
 
-    Shoot: Enter
+    SHOOT: Enter
 
-    Restar: R
+    RESTART: R
 
-    Quit: ESC
+    QUIT: ESC
 
-    Pause: P'
+    PAUSE: P
+
+    MUTE MUSIC: M
+
+    MUTE SOUNDS:N'
 --- !u!222 &1216534838
 CanvasRenderer:
   m_ObjectHideFlags: 0
