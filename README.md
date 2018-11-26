@@ -3,7 +3,7 @@ Agent Amazent is a 2D shooting where an agent tries to collect stars and destroy
 
 You can play the game here: https://villepajala.itch.io/agent-amazement-play-in-browser <br>
 
-If you want to see the code, ![Agent-Amazement/Agent Amazement/Assets/Scripts/]
+If you want to see the code, ![(Agent%20Amazement/Assets/Scripts]
 
 ![](Agent%20Amazement/Images/Agent%20Amazement.png)
 ![](Agent%20Amazement/Images/Agent%20Amazement2.png)
