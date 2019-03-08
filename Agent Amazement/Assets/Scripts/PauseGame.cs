@@ -4,46 +4,26 @@ using UnityEngine;
 
 public class PauseGame : MonoBehaviour {
 
-    // Setting up the variables
     public GameObject agent = null;
     private AudioSource[] sounds = null;
 
-    void Start()
-    {
-        // Findig GameObjects
+    void Start() {
         this.agent = GameObject.Find("Player");
         this.sounds = GameObject.Find("SoundController").GetComponents<AudioSource>();
-
-    } // Start
+    } 
 
     void Update () {
-
-        // If the key 'P' is pressed
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            // If game time is normal while P is pressed
-            if (Time.timeScale == 1)
-            {
-                // game time is stopped
+        if (Input.GetKeyDown(KeyCode.P)) {
+            if (Time.timeScale == 1) {
                 Time.timeScale = 0;
-                // The script for player movement is disabled
                 this.agent.GetComponent<PlayerController>().enabled = false;
-                // Background music is paused
                 this.sounds[0].Pause();
-            }
-
-            // When P is not pressed or pressed again
-            else
-            {
-                // Game time is set to normal
+            } else {
                 Time.timeScale = 1;
-                // The script for player movement is enabled
                 this.agent.GetComponent<PlayerController>().enabled = true;
-                // Background music plays normally
                 this.sounds[0].Play();
             }
+        } 
+    } 
 
-        } // if
-
-    } // Update
-} // Class
+} 

@@ -10,26 +10,15 @@ public class BulletController : MonoBehaviour {
 
 
 	void Start () {
-
         rb = GetComponent<Rigidbody2D>();
-
-	} //Start
+	} 
 	
-
 	void Update () {
-
         rb.velocity = new Vector2(velX, velY);
+	} 
 
-	} // Update
-
-
-    // Destroy bullet when hitting any collider
-    void OnCollisionEnter2D(Collision2D collision)
-    {  
-
+    void OnCollisionEnter2D(Collision2D collision) {  
         Destroy(gameObject); 
+    } 
 
-    } // OnCollisionEnter2D
-
-
-} // Class
+}

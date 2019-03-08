@@ -4,34 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class LevelCleared : MonoBehaviour
-{
-    // Setting up a variable which functions as a trigger
+public class LevelCleared : MonoBehaviour {
+
     public int win = 0;
 
-    void Start()
-    {
 
-    } // Start
+    void Start() {
 
+    }
 
-    void Update()
-    {
-        // In case the Player collides wtih the MasterCoin, the variable win is changed to 1 from the CoinController -script
-        if (win == 1)
-        {
-            // folloving function is delayed to start after 2 seconds
+    void Update() {
+        if (win == 1) {
             Invoke("GoToScene", 2);
         }
+    } 
 
-
-    } // Update
-
-    // The Level CLeared -scene is loaded
-    void GoToScene()
-    {
+    void GoToScene() {
         SceneManager.LoadScene(3);
+    } 
 
-    } // GoToScene
-
-} // Class
+} 

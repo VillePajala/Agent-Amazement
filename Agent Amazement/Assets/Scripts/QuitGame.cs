@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour {
 
-	
-	
 	void Update () {
 
-        // If the ESC key is pressed
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            
-            // Game stops if played as an application
+        if (Input.GetKeyUp(KeyCode.Escape)) {
             Application.Quit();
         }
-		
-	} // Update
-} // Class
+	} 
+
+} 
+

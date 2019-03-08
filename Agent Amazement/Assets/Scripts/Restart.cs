@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour
-{
+public class Restart : MonoBehaviour {
 
-    void Update()
-    {
-        // If the key 'R' is pressed
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            // The currently active scene is reloaded
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        } // if
+        } 
+    } 
 
-    } // Update
+} 
 
-} // Class
