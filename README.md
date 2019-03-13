@@ -1,6 +1,14 @@
 # AGENT AMAZEMENT
 Agent Amazent is a 2D shooting where an agent tries to collect stars and destroy despots on his way.
 
+## Features
+
+* Player movement animation with sprites
+* Shooting system
+* Points system
+* Soundsystem
+* Made my own soundtrack
+
 ## Play Game
 
 You can play the game here: https://villepajala.itch.io/agent-amazement-play-in-browser <br>
@@ -13,6 +21,7 @@ If you want to go straight to see the code, click [HERE.](Agent%20Amazement/Asse
 
 * Unity 3D
 * C#
+* Ableton Live 10 (Soundtrack)
 * Adobe Photoshop cc (For editing animation sprites)
 
 ## Screenshots
